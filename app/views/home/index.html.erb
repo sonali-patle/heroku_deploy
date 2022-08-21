@@ -1,2 +1,13 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Home Page</h1>
+
+<div class="row">
+  <% @users.each do |user| %>
+    <div class="col mt-5">
+      <div class="card" style="width: 18rem;">
+        <%= user.first_name%>
+        <%= user.last_name%>
+        <%= user.email%>
+      </div>
+    </div>
+  <% end %>
+</div>
